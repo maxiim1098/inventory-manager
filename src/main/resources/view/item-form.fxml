@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.inventory.controller.ItemFormController"
+      spacing="10" style="-fx-padding: 20;" prefWidth="400">
+
+    <Label text="Название товара*" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="nameField" promptText="От 3 до 50 символов">
+        <tooltip>
+            <Tooltip text="Обязательное поле, 3-50 символов"/>
+        </tooltip>
+    </TextField>
+
+    <Label text="Описание" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="descriptionField" promptText="До 255 символов">
+        <tooltip>
+            <Tooltip text="Необязательное поле, до 255 символов"/>
+        </tooltip>
+    </TextField>
+
+    <HBox spacing="10" style="-fx-padding: 10 0 0 0; -fx-alignment: center-right;">
+        <Button text="Сохранить" onAction="#handleSave" defaultButton="true" style="-fx-min-width: 100;"/>
+        <Button text="Отмена" onAction="#handleCancel" cancelButton="true" style="-fx-min-width: 100;"/>
+    </HBox>
+
+</VBox>

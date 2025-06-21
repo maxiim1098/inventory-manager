@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.inventory.controller.MainController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выход" onAction="#handleExit"/>
+        </Menu>
+    </MenuBar>
+
+    <ToolBar>
+        <Button text="Добавить" onAction="#handleAdd" styleClass="button"/>
+        <Button text="Редактировать" onAction="#handleEdit" styleClass="button"/>
+        <Button text="Удалить" onAction="#handleDelete" styleClass="button"/>
+    </ToolBar>
+
+    <HBox spacing="10" style="-fx-padding: 0 10 10 10;">
+        <Label text="Поиск:" styleClass="label"/>
+        <TextField fx:id="searchField" promptText="Введите название..." prefWidth="200"/>
+        <Label text="Сортировка:" styleClass="label"/>
+        <ComboBox fx:id="sortComboBox" onAction="#handleSort" prefWidth="150"/>
+    </HBox>
+
+    <TableView fx:id="itemsTable" VBox.vgrow="ALWAYS" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="100" sortable="true"/>
+            <TableColumn fx:id="nameColumn" text="Название" prefWidth="200" sortable="true"/>
+            <TableColumn fx:id="descriptionColumn" text="Описание" prefWidth="300" sortable="true"/>
+            <TableColumn fx:id="createdAtColumn" text="Дата создания" prefWidth="150" sortable="true"/>
+        </columns>
+    </TableView>
+</VBox>
