@@ -1,0 +1,12 @@
+Test Execution Summary
+                                    ======================
+                                    Project: Inventory Manager
+                                    Version: 1.0-SNAPSHOT
+                                    Timestamp: 2025-06-21 06:39:26
+
+                                    Java Version: 17.0.15
+                                    Maven Version: 3.9.9
+
+                                    NOTE: Run 'mvn test' to see detailed test results
+                                    Detailed HTML report: test-report.html
+                                    Full console output: full-console-output.txt
